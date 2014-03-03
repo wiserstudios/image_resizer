@@ -5,6 +5,7 @@ require 'net/http'
 get '/*x*' do |width, height|
   puts width, height, params[:url]
   random_number = rand
+  Dir.mkdir "tmp" unless Dir.exists? "tmp"
   output_doc = "tmp/file#{random_number}"
   output_thumb = "tmp/thumb#{random_number}"
   puts "wget --output-document=#{output_doc} #{params[:url]}"
