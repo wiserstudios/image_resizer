@@ -1,2 +1,2 @@
-require './hotline'
+require './image_resizer'
 run Sinatra::Application
